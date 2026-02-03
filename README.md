@@ -5,7 +5,7 @@ A simple noname master server for Electron.
 + Download [Electron v22.3.27](https://github.com/electron/electron/releases/tag/v22.3.27) for your operating system.
   + You can download the latest or a previous version of Electron, as long as your system supports it.
 + Download this repository and extract the files into the Electron application directory.
-+ Copy [server.js](https://github.com/adeFuLoDgu/noname/blob/master/scripts/server.js) into the Electron application directory.
++ Download [server.js](https://github.com/adeFuLoDgu/noname/blob/master/apps/core/scripts/server.js) and place it in the Electron application directory.
 + Electron application directory examples:
 
 ### Windows
