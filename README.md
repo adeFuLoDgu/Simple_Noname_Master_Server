@@ -5,6 +5,7 @@ A simple noname master server for Electron.
 + Download [Electron v22.3.27](https://github.com/electron/electron/releases/tag/v22.3.27) for your operating system.
   + You can download the latest or a previous version of Electron, as long as your system supports it.
 + Download this repository and extract the files into the Electron application directory.
++ Download [master_server.cjs](https://adefulodgu.github.io/noname/master_server.cjs) and place it in the Electron application directory.
 + Electron application directory examples:
 
 ### Windows
@@ -16,9 +17,9 @@ Electron/
    └─ app/
        ├─ node_modules/
        ├─ index.html
-       ├─ main.js
+       ├─ main.cjs
        ├─ package.json
-       └─ server.js
+       └─ master_server.cjs
 ```
 
 ### Linux
@@ -30,9 +31,9 @@ Electron/
    └─ app/
        ├─ node_modules/
        ├─ index.html
-       ├─ main.js
+       ├─ main.cjs
        ├─ package.json
-       └─ server.js
+       └─ master_server.cjs
 ```
 
 ### macOS
@@ -45,9 +46,9 @@ Electron/
       │   └─ app/
       │       ├─ node_modules/
       │       ├─ index.html
-      │       ├─ main.js
+      │       ├─ main.cjs
       │       ├─ package.json
-      │       └─ server.js
+      │       └─ master_server.cjs
       └─ MacOS/
          └─ Electron
 ```

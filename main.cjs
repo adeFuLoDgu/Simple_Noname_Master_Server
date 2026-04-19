@@ -3,7 +3,7 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
-require("./server.js");
+require("./master_server.cjs");
 
 let win;
 

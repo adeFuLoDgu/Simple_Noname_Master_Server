@@ -1,7 +1,7 @@
 {
 	"name": "Noname_Electron_Websocket_Server",
-	"version": "0.0.1",
-	"main": "main.js",
+	"version": "0.0.2",
+	"main": "main.cjs",
 	"scripts": {
     "start": "electron ."
   }
