@@ -5,7 +5,11 @@
 </head>
 <body>
 Noname WebSocket server started.</br>
-Listening on port 8080.</br>
+Listening on port: <span id="port">8082</span>.</br>
 Close this window to stop the server.</br>
+<script>
+const config = require("./config.cjs");
+document.getElementById("port").innerHTML = config.ws_port;
+</script>
 </body>
 </html>

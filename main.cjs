@@ -1,11 +1,25 @@
 "use strict";
 
 const { app, BrowserWindow } = require("electron");
-const path = require("path");
+const { createServer } = require("./master_server.cjs");
+const config = require("./config.cjs");
 
-require("./master_server.cjs");
+let wsServer;
+const ws_port = config.ws_port;
 
-let win;
+async function startWebSocketServer() {
+    wsServer = createServer({
+        port: ws_port,
+    });
+
+    try {
+        await wsServer.start();
+        console.log("WebSocket Server started on port ", ws_port);
+    }
+    catch (e) {
+        console.error("WebSocket Server start failed:", e);
+    }
+}
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -22,8 +36,17 @@ function createWindow() {
   win.loadFile("index.html");
 }
 
-app.on("ready", createWindow);
-app.on("window-all-closed", () => app.quit());
+app.whenReady().then(async () => {
+    await startWebSocketServer();
+    createWindow();
+});
+
+app.on("window-all-closed", async () => {
+    if (wsServer) {
+        await wsServer.stop();
+    }
+    app.quit();
+});
 
 app.on("activate", () => {
 	if (win === null) createWindow();
