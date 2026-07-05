@@ -16,6 +16,7 @@ Electron/
 └─ resources/
    └─ app/
        ├─ node_modules/
+       ├─ config.cjs
        ├─ index.html
        ├─ main.cjs
        ├─ package.json
@@ -30,6 +31,7 @@ Electron/
 └─ resources/
    └─ app/
        ├─ node_modules/
+       ├─ config.cjs
        ├─ index.html
        ├─ main.cjs
        ├─ package.json
@@ -45,6 +47,7 @@ Electron/
       ├─ Resources/
       │   └─ app/
       │       ├─ node_modules/
+      │       ├─ config.cjs
       │       ├─ index.html
       │       ├─ main.cjs
       │       ├─ package.json
